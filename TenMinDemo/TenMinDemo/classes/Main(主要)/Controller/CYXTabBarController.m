@@ -36,10 +36,16 @@
     
     // 2.添加第2个控制器
     CYXTwoViewController *twoVC = [[CYXTwoViewController alloc]init];
-    [self setUpOneChildViewController:twoVC image:[UIImage imageNamed:@"js"] title:@"技术"];
+    [self setUpOneChildViewController:twoVC image:[UIImage imageNamed:@"js"] title:@"CYXDemo"];
     
     // 3.添加第3个控制器
-    CYXThreeViewController *threeVC = [[CYXThreeViewController alloc]init];
+//    CYXThreeViewController *threeVC = [[CYXThreeViewController alloc]init];
+//    [self setUpOneChildViewController:threeVC image:[UIImage imageNamed:@"qw"] title:@"博文"];
+    
+    UIStoryboard *threeStoryBoard = [UIStoryboard storyboardWithName:@"CYXThreeViewController" bundle:nil];
+    
+    CYXThreeViewController *threeVC = [threeStoryBoard instantiateInitialViewController];
+    //    CYXFourViewController *fourVC = [[CYXFourViewController alloc]init];
     [self setUpOneChildViewController:threeVC image:[UIImage imageNamed:@"qw"] title:@"博文"];
     
     // 4.添加第4个控制器
